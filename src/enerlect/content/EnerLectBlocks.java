@@ -29,7 +29,7 @@ import static mindustry.type.ItemStack.with;
 
 public class EnerLectBlocks implements ContentList {
   public static Block
-    circleator;
+    implosion;
   
   @Override
   public void load() {
