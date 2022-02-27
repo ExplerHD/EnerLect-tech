@@ -10,12 +10,10 @@ import mindustry.gen.*;
 
 public class EnerLect extends Mod{
   
-  public EnerLect(){
-    log.info("Loaded EnerLect Constructor");
-  }
-  
+  public EnerLect(){}
+
   @Override
-  public boid loadContent(){
+  public void loadContent(){
     new EnerLectBlocks().load();
     new EnerLectBullets().load();
   }
