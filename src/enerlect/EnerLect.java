@@ -13,7 +13,7 @@ import enerlect.content.*;
 
 public class EnerLect extends Mod{
 	public EnerLect(){}
-	// load mod content
+	// load mod contents
 	@Override
 	public void loadContent(){
 		new EnerLectBlocks().load();
