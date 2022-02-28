@@ -46,7 +46,7 @@ public class EnerLectBlocks implements ContentList {
       powerUse = 2.7f;
       restitution = 0.05f;
       shootType = new LaserBulletType(145){{ /* contoh code laser bullet */
-        colors = new Color[]{Pal.darkishGray.a(1f)},
+        colors = new Color[]{Pal.darkishGray.a(1f)};
         hitEffect = hit.lancer;
         hitSize = 6;
         lifetime = 36f;
