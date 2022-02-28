@@ -48,14 +48,35 @@ public class EnerLectBlocks implements ContentList{
       range = 135f;
       powerUse = 2.7f;
       restitution = 0.05f;
-      shootType = new LaserBulletType(145){{ /* contoh code laser bullet */
-        colors = new Color[]{Pal.darkishGray.a(1f)};
-        hitSize = 6;
-        lifetime = 36f;
-        drawSize = 200f;
-        collidesAir = true;
-        length = 135f;
-        ammoMultiplier = 2f;
+      shootType = new MissileBulletType(3.1f, 350){{
+        // bullet sprite
+        sprite = "missile-large";
+        collidesGround = collidesAir = true;
+        explodeRange = 40f;
+        width = height = 12f;
+        shrinkY = 0f;
+        drag = -0.003f;
+        homingRange = 60f;
+        keepVelocity = false;
+        lightRadius = 60f;
+        lightOpacity = 0.7f;
+        lightColor = Color.blue;
+        splashDamageRadius = 70f;
+        splashDamage = 350f;
+        lifetime = 80f;
+        backColor = Color.blue;
+        frontColor = Color.white;
+        // effects
+        hitEffect = new WaveEffect(){{
+          lifetime = 60f;
+          sides = 6;
+          sizeFrom = 70f;
+          sizeTo = 70f;
+          strokeFrom = 4f;
+          strokeTo = 0f;
+          colorFrom = Pal.heal;
+          colorTo = Color.blue;
+        }};
       }};
     }};
   }
