@@ -29,5 +29,5 @@ public class Fx{
     color(Color.blue);
     stroke(3f * e.fout());
     Lines.poly(e.x, e.y, 6, e.rotation + e.fin);
-  })followParent(true);
+  }).followParent(true);
 }
