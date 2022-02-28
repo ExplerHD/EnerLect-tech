@@ -19,7 +19,8 @@ import static arc.graphics.g2d.Draw.*;
 import static arc.graphics.g2d.Lines.*;
 import static arc.math.Angles.*;
 import static mindustry.Vars.*;
-public class EnerLectFX{
+
+public class EnerLectFx{
   private static final Rand rand = new Rand();
   private static final Vec2 v = new Vec2();
   
