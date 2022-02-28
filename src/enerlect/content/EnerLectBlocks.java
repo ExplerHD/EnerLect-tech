@@ -52,7 +52,6 @@ public class EnerLectBlocks implements ContentList{
         // bullet sprite
         sprite = "missile-large";
         collidesGround = collidesAir = true;
-        explodeRange = 40f;
         width = height = 12f;
         shrinkY = 0f;
         drag = -0.003f;
