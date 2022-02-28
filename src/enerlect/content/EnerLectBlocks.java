@@ -27,6 +27,7 @@ import mindustry.world.meta.*;
 import mindustry.world.draw.*;
 
 import enerlect.content.*;
+import enerlect.graphics.*;
 
 import static mindustry.type.ItemStack.with;
 
@@ -43,7 +44,7 @@ public class EnerLectBlocks implements ContentList{
         Items.plastanium, 60
       ));
       size = 2;
-      health = 50 * size * size;
+      health = 320;
       reloadTime = 90f;
       range = 135f;
       powerUse = 2.7f;
@@ -51,15 +52,18 @@ public class EnerLectBlocks implements ContentList{
       shootType = new MissileBulletType(3.1f, 350){{
         // bullet sprite
         sprite = "missile-large";
+        // targeting
         collidesGround = collidesAir = true;
+        // general
         width = height = 12f;
         shrinkY = 0f;
         drag = -0.003f;
-        homingRange = 60f;
         keepVelocity = false;
+        // lighting
         lightRadius = 60f;
         lightOpacity = 0.7f;
         lightColor = Color.blue;
+        // damage
         splashDamageRadius = 70f;
         splashDamage = 350f;
         lifetime = 80f;
