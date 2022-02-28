@@ -67,16 +67,7 @@ public class EnerLectBlocks implements ContentList{
         backColor = Color.blue;
         frontColor = Color.white;
         // effects
-        hitEffect = new WaveEffect(){{
-          lifetime = 60f;
-          sides = 6;
-          sizeFrom = 70f;
-          sizeTo = 70f;
-          strokeFrom = 4f;
-          strokeTo = 0f;
-          colorFrom = Pal.heal;
-          colorTo = Color.blue;
-        }};
+        hitEffect = EnerLectFX.implosion;
       }};
     }};
   }
