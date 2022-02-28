@@ -45,7 +45,16 @@ public class EnerLectBlocks implements ContentList {
       range = 135f;
       powerUse = 2.7f;
       restitution = 0.05f;
-      shootType = EnerLectBullets.implosion;
+      shootType = new LaserBulletType(145){{ /* contoh code laser bullet */
+        colors = new Color[]{Pal.darkishGray.a(1f),
+        hitEffect = hit.lancer;
+        hitSize = 6;
+        lifetime = 36f;
+        drawSize = 200f;
+        collidesAir = true;
+        length = 135f;
+        ammoMultiplier = 2f;
+      }};
     }};
   }
 }
