@@ -16,7 +16,6 @@ public class EnerLect extends Mod{
 	// load mod contents
 	@Override
 	public void loadContent(){
-		new EnerLectBlocks().load();
-//	no 	new EnerLectFx().load();
+    new EnerLectBlocks().load();
 	}
 }
