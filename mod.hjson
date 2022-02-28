@@ -1,8 +1,8 @@
 displayName: "Java Mod Template"
-name: "example-java-mod"
-author: "You"
-main: "example.ExampleJavaMod"
-description: "A Mindustry Java mod template."
+name: "enerlect"
+author: "ExplerHD"
+main: "enerlect.EnerLect"
+description: "no."
 version: 1.0
 minGameVersion: 135
 java: true
