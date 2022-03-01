@@ -37,7 +37,7 @@ public class EnerLectBlocks implements ContentList{
   
   @Override
   public void load() {
-    implosion = new PowerTurret("circleator"){{
+    implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
         Items.copper, 50,
         Items.lead, 50,
