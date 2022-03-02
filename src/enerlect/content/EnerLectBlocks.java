@@ -71,6 +71,7 @@ public class EnerLectBlocks implements ContentList{
         frontColor = Color.white;
         // effects
         hitEffect = EnerLectFx.implosion;
+        despawnEffect = EnerLectFx.implosion;
       }};
     }};
   }
