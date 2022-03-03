@@ -14,7 +14,7 @@ public class LunarGenerator extends PowerGenerator{
   }
   
   public void setStats(){
-    super.(setStats);
+    super.setStats();
     stats.remove(generationType);
     stats.add(generationType, powerProduction * 60.0f, StatUnit.powerSecond);
   }
