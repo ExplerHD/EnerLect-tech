@@ -13,6 +13,6 @@ This Mod Adds:
 
 ### Items/Liquids
 
-- Items: 1 (beta)
+- Items: 1
 - Liquids: 1
 
