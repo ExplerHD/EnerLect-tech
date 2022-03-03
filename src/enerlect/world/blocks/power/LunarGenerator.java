@@ -21,7 +21,7 @@ public class LunarGenerator extends PowerGenerator{
   
   public class LunarGeneratorBuild extends GeneratorBuild{
     @Override
-    public void updateTile{
+    public void updateTile(){
       productionEfficiency = enabled ?
         Mathf.maxZero(Attribute.light.env() + 
                       (state.rules.lighting ?
