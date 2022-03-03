@@ -37,7 +37,7 @@ public class EnerLectBlocks implements ContentList{
     implosion,
   
     // power
-    spectralGrnerator;
+    spectralGenerator;
   @Override
   public void load() {
     // reg turrets
@@ -90,7 +90,7 @@ public class EnerLectBlocks implements ContentList{
       health = 40 * size * size;
       powerProduction = 115f;
       ambientSound = Sounds.steam;
-      ambientSoundVolume = 0.03;
+      ambientSoundVolume = 0.03f;
     }};
   }
 }
