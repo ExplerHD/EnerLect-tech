@@ -1,8 +1,8 @@
-displayName: "Java Mod Template"
+displayName: "EnerLect Industries"
 name: "enerlect"
 author: "ExplerHD"
 main: "enerlect.EnerLect"
-description: "no."
+description: "A mindustry mods that provides an content"
 version: 1.0
 minGameVersion: 135
 java: true
