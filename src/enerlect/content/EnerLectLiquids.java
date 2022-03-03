@@ -4,7 +4,7 @@ import arc.graphics.*;
 import mindustry.ctype.*;
 import mindustry.type.*;
 
-public class EnerLectLiquid implements ContentList{
+public class EnerLectLiquids implements ContentList{
   public static Liquid electricLiquid;
   
   @Override
