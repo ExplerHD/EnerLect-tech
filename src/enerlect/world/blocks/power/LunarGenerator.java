@@ -7,12 +7,13 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 public class LunarGenerator extends PowerGenerator{
   
-  public LunarGenerator(string name){
+  public LunarGenerator(String name){
     super(name);
     flags = EnumSet.of();
     envEnabled = Env.any;
   }
   
+  @Override
   public void setStats(){
     super.setStats();
     stats.remove(generationType);
