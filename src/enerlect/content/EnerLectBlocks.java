@@ -107,7 +107,7 @@ public class EnerLectBlocks implements ContentList{
     spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
       requirements(Category.power, with(Items.copper, 60, Items.lead, 60, Items.plastanium, 60, Items.phaseFabric, 60));
       consumes.item(Items.thorium);
-      consumes.liquid(EnerLectLiquids.electricLiquid, 0.15f);
+      consumes.liquid(EnerLectItems.electricLiquid, 0.15f);
       hasItems = true;
       hasLiquids = true;
       size = 4;
