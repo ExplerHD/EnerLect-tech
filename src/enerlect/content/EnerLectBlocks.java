@@ -84,14 +84,14 @@ public class EnerLectBlocks implements ContentList{
         Items.copper, 150,
         Items.lead, 135,
         Items.silicon, 87
-    ));
+      ));
       size = 2;
       health = 1200;
       reloadTime = 60f;
       range = 25f * 8f;
       powerUse = 6.25f;
       restitution = 0.05f;
-      shootType = new LaserBulletType {{
+      shootType = new LaserBulletType{{
         colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
         hitEffect = Fx.hitLancer;
         hitSize = 4;
