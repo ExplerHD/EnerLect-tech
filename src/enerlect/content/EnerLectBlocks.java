@@ -28,6 +28,8 @@ import mindustry.world.draw.*;
 
 import enerlect.content.*;
 import enerlect.graphics.*;
+import enerlect.world.blocks.*;
+import enerlect.world.blocks.power.*;
 
 import static mindustry.type.ItemStack.with;
 
