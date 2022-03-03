@@ -5,7 +5,7 @@ import mindustry.ctype.ContentList;
 import mindustry.type.*;
 
 public class EnerLectItems implements ContentList{
-  public static Items darkenedMetal;
+  public static Item darkenedMetal;
   public static Liquid electricLiquid;
   
   @Override
