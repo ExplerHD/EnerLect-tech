@@ -116,5 +116,11 @@ public class EnerLectBlocks implements ContentList{
       ambientSound = Sounds.steam;
       ambientSoundVolume = 0.03f;
     }};
+    
+    lunarPanel = new LunarGenerator("lunar-panel"){{
+      requirements(Category.power, with(Items.silicon, 15, /* EnerLectItems.darkenedMetal, 10, */ Items.lead, 15));
+      size = 2;
+      powerProduction = 0.25f;
+    }};
   }
 }
