@@ -91,7 +91,7 @@ public class EnerLectBlocks implements ContentList{
       range = 25f * 8f;
       powerUse = 6.25f;
       restitution = 0.05f;
-      shootType = new LaserBulletType{{
+      shootType = new LaserBulletType(154){{
         colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
         hitEffect = Fx.hitLancer;
         hitSize = 4;
