@@ -27,6 +27,6 @@ public class EnerLectFx{
   implosion = new Effect(60f, e -> {
     color(Color.blue);
     stroke(3f * e.fout());
-    Lines.poly(e.x, e.y, 6, e.rotation, 70f * e.fout());
+    Lines.poly(e.x, e.y, 6, e.rotation, 30f * e.fout());
   });
 }
