@@ -9,10 +9,10 @@ This Mod Adds:
 ### Blocks
 
 - Turrets: 2
-- Power: 1
+- Power: 2
 
 ### Items/Liquids
 
-- Items: -
+- Items: 1 (beta)
 - Liquids: 1
 
