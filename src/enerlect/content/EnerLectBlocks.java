@@ -33,10 +33,14 @@ import static mindustry.type.ItemStack.with;
 
 public class EnerLectBlocks implements ContentList{
   public static Block
-    implosion;
+    // turrets
+    implosion,
   
+    // power
+    spectralGrnerator;
   @Override
   public void load() {
+    // reg turrets
     implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
         Items.copper, 50,
@@ -73,6 +77,20 @@ public class EnerLectBlocks implements ContentList{
         hitEffect = EnerLectFx.implosion;
         despawnEffect = EnerLectFx.implosion;
       }};
+    }};
+    // turrets end
+    // reg power
+    spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
+      requirements(Category.power, with(Items.copper, 60, Items.lead, 60, Items.plastanium, 60, Items.phaseFabric, 60));
+      consumes.item(Items.thorium);
+      consumes.liquid(EnerLectLiquids.electricLiquid, 0.1);
+      hasItems = true;
+      hasLiquids = true;
+      size = 4;
+      health = 40 * size * size;
+      powerProduction = 115f;
+      ambientSound = Sounds.steam;
+      ambientSoundVolume = 0.03;
     }};
   }
 }
