@@ -34,6 +34,9 @@ public class EnerLectItems implements ContentList{
     electricLiquid = new Liquid("electric-liquid", Color.valueOf("f5372a")){{
       viscosity = 1.2f;
     }};
+    thoriumCooler = new Liquid("thoriumCooler", Color.valueOf("#f29dd0")){{
+      viscosity = 1f;
+    }};
     // liquids end
   }
 }
