@@ -32,6 +32,7 @@ import enerlect.world.blocks.*;
 import enerlect.world.blocks.power.*;
 
 import static mindustry.type.ItemStack.with;
+impirt static mindustry.type.ItemStack.*;
 
 public class EnerLectBlocks implements ContentList{
   public static Block
@@ -51,7 +52,7 @@ public class EnerLectBlocks implements ContentList{
       craftTime = 60f;
       size = 2;
       hasItems = true;
-      consumes.item(Items.copper, 2, Items.coal, 1, Items.silicon, 1);
+      consumes.item(Items.copper, 2, Items.silicon, 1, Items.coal, 1);
     }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
