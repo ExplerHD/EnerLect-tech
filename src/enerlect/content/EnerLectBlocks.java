@@ -41,7 +41,7 @@ public class EnerLectBlocks implements ContentList{
     // turrets
     implosion, aftab, /* balabad, */ 
     // power
-    spectralGenerator, lunarPanel, MediumLunarPanel, largeLunarPanel, hugeLunarPanel;
+    spectralGenerator, lunarPanel, mediumLunarPanel, largeLunarPanel, hugeLunarPanel;
   @Override
   public void load() {
     // reg crafters
