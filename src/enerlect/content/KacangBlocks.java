@@ -38,8 +38,29 @@ import enerlect.world.blocks.*;
 import enerlect.world.blocks.power.*;
 
 public class KacangBlocks implements ContentList{
-  public static Block test;
-  @Override
-  public void load() {
-  }
+	public static Block 
+	/* code test */ test,
+	/* turrets */ binara;
+	public static Item kacang;
+	@Override
+  	public void load(){
+		// items
+		kacang = new Item("kacang"){{
+			 cost = 0;
+		}};
+		// blocks
+		test = new AirBlock("test");
+		binara = new ItemTurret("binara"){{
+			 requirements(Category.turret, with(Items.copper, 28, KacangBlocks.kacang, 12));
+			 ammo(KacangBlocks.kacang, Bullets.standardDense);
+			 health = 200;
+			 range = 192f;
+			 recoilAmount = 0.03f;
+			 targetAir = true;
+			 targetGround = true;
+			 reloadTime = 30f;
+			 rotateSpeed = 5.5f;
+			 limitRange(0f);
+		}};
+  	}
 }

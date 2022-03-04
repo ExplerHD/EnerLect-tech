@@ -8,12 +8,12 @@ This Mod Adds:
 
 ### Blocks
 
-- Turrets: 2
+- Turrets: 3
 - Power: 2
 - Production: 1
 
 ### Items/Liquids
 
-- Items: 4
+- Items: 5
 - Liquids: 1
 
