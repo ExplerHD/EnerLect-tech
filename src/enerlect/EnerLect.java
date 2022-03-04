@@ -20,3 +20,11 @@ public class EnerLect extends Mod{
     new EnerLectItems().load();
 	}
 }
+class Kacang extends Mod{
+	public Kacang(){}
+	// a
+	@Override
+	public void loadContent(){
+	new KacangBlocks().load();
+	}
+}
