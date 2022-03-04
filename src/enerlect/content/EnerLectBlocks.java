@@ -117,7 +117,7 @@ public class EnerLectBlocks implements ContentList{
     }};
     // turrets end
     // reg power
-    spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
+    /* spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
       requirements(Category.power, with(Items.copper, 60, Items.lead, 60, Items.plastanium, 60, Items.phaseFabric, 60));
       consumes.item(Items.thorium);
       consumes.liquid(EnerLectItems.electricLiquid, 0.15f);
@@ -128,7 +128,7 @@ public class EnerLectBlocks implements ContentList{
       powerProduction = 115f;
       ambientSound = Sounds.steam;
       ambientSoundVolume = 0.03f;
-    }};
+    }}; */ //disabled due to nullpointerexception
     
     lunarPanel = new LunarGenerator("lunar-panel"){{
       requirements(Category.power, with(Items.silicon, 15, EnerLectItems.darkenedMetal, 10, Items.lead, 15));
