@@ -35,12 +35,24 @@ import static mindustry.type.ItemStack.with;
 
 public class EnerLectBlocks implements ContentList{
   public static Block
+    // crafters
+    yellowsteelForge
     // turrets
     implosion, aftab, /* balabad, */ 
     // power
     spectralGenerator, lunarPanel;
   @Override
   public void load() {
+    // reg crafters
+    graphitePress = new GenericCrafter("graphite-press"){{
+      requirements(Category.crafting, with(Items.copper, 80, Items.lead, 45, Items.graphite, 57));
+      craftEffect = Fx.pulverizeMedium;
+      outputItem = new ItemStack(EnerLectItems.yellowsteel, 1);
+      craftTime = 60f;
+      size = 2;
+      hasItems = true;
+      consumes.item(Items.copper, 2, Items.coal, 1, Items.silicon, 1);
+    }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
