@@ -44,7 +44,7 @@ public class EnerLectBlocks implements ContentList{
   @Override
   public void load() {
     // reg crafters
-    graphitePress = new GenericCrafter("graphite-press"){{
+    yellowsteelForge = new GenericCrafter("yellowsteel-forge"){{
       requirements(Category.crafting, with(Items.copper, 80, Items.lead, 45, Items.graphite, 57));
       craftEffect = Fx.pulverizeMedium;
       outputItem = new ItemStack(EnerLectItems.yellowsteel, 1);
