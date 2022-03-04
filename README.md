@@ -7,13 +7,10 @@ A Mindustry V7 mod written in Java.
 This Mod Adds:
 
 ### Blocks
-
 - Turrets: 3
 - Power: 2
 - Production: 1
-
 ### Items/Liquids
-
-- Items: 5
+- Items: 6
 - Liquids: 1
 
