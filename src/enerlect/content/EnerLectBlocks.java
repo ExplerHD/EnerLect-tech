@@ -36,7 +36,7 @@ import static mindustry.type.ItemStack.with;
 public class EnerLectBlocks implements ContentList{
   public static Block
     // crafters
-    yellowsteelForge
+    yellowsteelForge,
     // turrets
     implosion, aftab, /* balabad, */ 
     // power
