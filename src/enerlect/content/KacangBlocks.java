@@ -39,11 +39,14 @@ import enerlect.world.blocks.power.*;
 
 public class KacangBlocks implements ContentList{
 	public static Block test;
-	public static Item kacang
+	public static Item kacang;
 	@Override
   	public void load(){
+		// items
 		kacang = new Item("kacang"){{
 			 cost = 0;
 		}};
+		// blocks
+		test = new AirBlock("test");
   	}
 }
