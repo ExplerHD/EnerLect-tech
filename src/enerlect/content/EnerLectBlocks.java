@@ -120,7 +120,7 @@ public class EnerLectBlocks implements ContentList{
     lunarPanel = new LunarGenerator("lunar-panel"){{
       requirements(Category.power, with(Items.silicon, 15, /* EnerLectItems.darkenedMetal, 10, */ Items.lead, 15));
       size = 2;
-      powerProduction = 0.25f;
+      powerProduction = 0.27f;
     }};
   }
 }
