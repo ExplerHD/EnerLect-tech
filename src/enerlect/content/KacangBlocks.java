@@ -38,7 +38,9 @@ import enerlect.world.blocks.*;
 import enerlect.world.blocks.power.*;
 
 public class KacangBlocks implements ContentList{
-	public static Block test;
+	public static Block 
+	/* code test */ test,
+	/* turrets */ binara;
 	public static Item kacang;
 	@Override
   	public void load(){
