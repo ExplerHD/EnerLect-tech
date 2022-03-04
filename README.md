@@ -10,6 +10,7 @@ This Mod Adds:
 
 - Turrets: 2
 - Power: 2
+- Production: 1
 
 ### Items/Liquids
 
