@@ -32,7 +32,7 @@ import enerlect.world.blocks.*;
 import enerlect.world.blocks.power.*;
 
 import static mindustry.type.ItemStack.with;
-impirt static mindustry.type.ItemStack.*;
+import static mindustry.type.ItemStack.*; // bjir
 
 public class EnerLectBlocks implements ContentList{
   public static Block
