@@ -1,11 +1,7 @@
-# EnerLect Tech
-
+# EnerLect Industries
 A Mindustry V7 mod written in Java.
-
 ## Contents
-
 This Mod Adds:
-
 ### Blocks
 - Turrets: 3
 - Power: 2
