@@ -13,6 +13,6 @@ This Mod Adds:
 
 ### Items/Liquids
 
-- Items: 1
+- Items: 3
 - Liquids: 1
 
