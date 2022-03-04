@@ -30,7 +30,7 @@ import mindustry.ctype.ContentList;
 import mindustry.type.*;
 import enerlect.content.*;
 
-import static mindustry.type.ItemsStack.with;
+import static mindustry.type.ItemStack.with;
 
 import enerlect.content.*;
 import enerlect.graphics.*;
