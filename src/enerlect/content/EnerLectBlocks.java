@@ -41,7 +41,7 @@ public class EnerLectBlocks implements ContentList{
     // turrets
     implosion, aftab, /* balabad, */ 
     // power
-    spectralGenerator, lunarPanel;
+    spectralGenerator, lunarPanel, MediumLunarPanel, largeLunarPanel, hugeLunarPanel;
   @Override
   public void load() {
     // reg crafters
@@ -131,9 +131,31 @@ public class EnerLectBlocks implements ContentList{
     }};
     
     lunarPanel = new LunarGenerator("lunar-panel"){{
-      requirements(Category.power, with(Items.silicon, 15, /* EnerLectItems.darkenedMetal, 10, */ Items.lead, 15));
+      requirements(Category.power, with(Items.silicon, 15, EnerLectItems.darkenedMetal, 10, Items.lead, 15));
+      health = 40 * size * size;
       size = 2;
       powerProduction = 0.27f;
+    }};
+    
+    mediumLunarPanel = new LunarGenerator("medium-lunar-panel"){{
+      requirements(Category.power, with(Items.silicon, 30, EnerLectItems.darkenedMetal, 15, Items.lead, 30, Items.metaglass, 15));
+      health = 40 * size * size;
+      size = 3;
+      powerProduction = 0.7f;
+    }};
+
+    largeLunarPanel = new LunarGenerator("large-lunar-panel"){{
+      requirements(Category.power, with(Items.silicon, 60, EnerLectItems.darkenedMetal, 30, Items.lead, 60, Items.metaglass, 30, Items.phaseFabric, 10));
+      health = 40 * size * size;
+      size = 4;
+      powerProduction = 1f;
+    }};
+    
+    hugelunarPanel = new LunarGenerator("huge-lunar-panel"){{
+      requirements(Category.power, with(Items.silicon, 100, EnerLectItems.darkenedMetal, 70, Items.lead, 100, Items.metaglass, 60, Items.phaseFabric, 30, Items.surgeAlloy, 10));
+      health = 40 * size * size;
+      size = 5;
+      powerProduction = 1.5f;
     }};
   }
 }
