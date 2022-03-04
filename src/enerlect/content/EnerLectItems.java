@@ -6,7 +6,7 @@ import mindustry.type.*;
 
 public class EnerLectItems implements ContentList{
   public static Item darkenedMetal, biostone, fragments, yellowsteel;
-  public static Liquid electricLiquid;
+  public static Liquid electricLiquid, thoriumCooler;
   
   @Override
   public void load(){
