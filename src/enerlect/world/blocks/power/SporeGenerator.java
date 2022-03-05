@@ -1,4 +1,4 @@
-package mindustry.world.blocks.power;
+package enerlect.world.blocks.power;
 
 import arc.*;
 import arc.graphics.*;
@@ -10,11 +10,12 @@ import mindustry.graphics.*;
 import mindustry.graphics.Pal;
 import mindustry.world.*;
 import mindustry.world.meta.*;
+import mindustry.world.blocks.power;
 
 public class SporeGenerator extends ThermalGenerator{
     public Effect generateEffect = Fx.none;
     public float effectChance = 0.078f;
-    public Attribute attribute = Attribute.none;
+    public Attribute attribute = Attribute.spores;
 
     public SporeGenerator(String name){
         super(name);
