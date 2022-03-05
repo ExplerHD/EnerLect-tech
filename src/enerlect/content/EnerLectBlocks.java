@@ -160,7 +160,7 @@ public class EnerLectBlocks implements ContentList{
     biostoneGenerator = new SporeGenerator("biostone-generator"){{
       requirements(Category.power, with(Items.copper, 40, Items.graphite, 35, Items.lead, 50, Items.silicon, 35, Items.metaglass, 40));
       powerProduction = 2.15f;
-      generateEffect = EnerlectFx.biostonegenerate;
+      generateEffect = EnerLectFx.biostonegenerate;
       size = 2;
       floating = true;
       ambientSound = Sounds.hum;
