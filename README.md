@@ -8,6 +8,7 @@ This Mod Adds:
 - Turrets: 3
 - Power: 2
 - Production: 1
+- Distribution: 2
 ### Items/Liquids
 - Items: 6
 - Liquids: 1
