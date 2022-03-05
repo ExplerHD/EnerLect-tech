@@ -41,21 +41,8 @@ public class KacangBlocks implements ContentList{
 	public static Block 
 	/* code test */ test,
 	/* turrets */ binara, udam;
-	public static Item kacang, kacangHijau;
 	@Override
-  	public void load(){
-		// items
-		kacang = new Item("kacang", Color.valueOf("edcc93")){{
-			cost = 0;
-			hardness  = 1;
-		}};
-		kacangHijau = new Item("kacang-hijau", Color.valueOf("c4e880")){{
-			cost = 0.1f;
-			hardness  = 1;
-		}};
-		// items end
-		
-		
+  public void load(){
 		// blocks
 		test = new AirBlock("test");
 		binara = new ItemTurret("binara"){{
