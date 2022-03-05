@@ -71,7 +71,7 @@ public class KacangBlocks implements ContentList{
 			 limitRange(0f);
 		}};
 		udam = new ItemTurret("udam"){{
-			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15 KacangBlocks.kacang, 20));
+			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15, KacangBlocks.kacang, 20));
 			ammo(KacangBlocks.kacang, new FlakBulletType(4f, 7){{
             			lifetime = 60f;
             			ammoMultiplier = 5f;
