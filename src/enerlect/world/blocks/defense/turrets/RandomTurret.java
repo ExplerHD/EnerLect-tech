@@ -25,7 +25,7 @@ import static mindustry.Vars.*;
 public class RandomTurret extends ItemTurret{ // kool random turret code
     public ObjectMap<Item, BulletType> ammoTypes = new ObjectMap<>();
 
-    public ItemTurret(String name){
+    public RandomTurret(String name){
         super(name);
         hasItems = true;
     }
@@ -177,7 +177,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
                 Item item = Vars.content.item(revision < 2 ? read.ub() : read.s());
                 short a = read.s();
 
-                if(item != null &&){
+                if(item != null){
                     totalAmmo += a;
                     ammo.add(new ItemEntry(item, a));
                 }
@@ -203,7 +203,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
     public class RandomEntry extends ItemEntry{
         public Item item;
 
-        ItemEntry(Item item, int amount){
+        RandomEntry(Item item, int amount){
             this.item = item;
             this.amount = amount;
         }
