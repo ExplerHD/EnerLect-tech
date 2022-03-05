@@ -37,7 +37,7 @@ import static mindustry.type.ItemStack.*; // bjir
 public class EnerLectBlocks implements ContentList{
   public static Block
     // crafters
-    yellowsteelForge,
+    yellowsteelForge, graphitepress2,
     // turrets
     implosion, aftab, /* balabad, */ 
     // distr
@@ -55,6 +55,15 @@ public class EnerLectBlocks implements ContentList{
       size = 2;
       hasItems = true;
       consumes.items(with(Items.copper, 2, Items.silicon, 1, Items.coal, 1));
+    }};
+    graphitepress2 = new GenericCrafter("graphite-press-ii"){{
+      requirements(Category.crafting, with(Items.copper, 150, Items.lead, 125, Items.silicon, 100));
+      craftEffect = Fx.pulverizeMedium;
+      outputItem = new ItemStack(Items.graphite, 3);
+      craftTime = 90f;
+      size = 3;
+      hasItems = true;
+      consumes.items(Items.coal, 2));
     }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
@@ -145,7 +154,7 @@ public class EnerLectBlocks implements ContentList{
       powerProduction = 115f;
       ambientSound = Sounds.steam;
       ambientSoundVolume = 0.03f;
-    }}; */ //disabled due to nullpointerexception
+    }};  //disabled due to nullpointerexception */
     
     lunarPanel = new LunarGenerator("lunar-panel"){{
       requirements(Category.power, with(Items.silicon, 15, EnerLectItems.darkenedMetal, 10, Items.lead, 15));
