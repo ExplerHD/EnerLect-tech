@@ -28,5 +28,16 @@ public class EnerLectFx{
     color(Color.blue);
     stroke(3f * e.fout());
     Lines.poly(e.x, e.y, 6, e.rotation, 30f * e.fout());
-  });
+  }),
+  biostonegenerate = new Effect(90, e -> {
+    color(Color.valueOf("97d96f"));
+    alpha(e.fslope());
+
+    rand.setSeed(e.id);
+    for(int i = 0; i < 2; i++){
+      v.trns(rand.random(360f), rand.random(e.finpow() * 9f)).add(e.x, e.y);
+      Fill.circle(v.x, v.y, rand.random(1.4f, 2.4f));
+    }
+  }).layer(Layer.bullet - 1f);
 }
+
