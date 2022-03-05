@@ -27,10 +27,6 @@ public class EnerLectFx{
   public static final Effect
 
   none = new Effect(0, 0f, e -> {}),
-    
-  
-  public static final Effect
-    
   implosion = new Effect(60f, e -> {
     color(Color.blue);
     stroke(3f * e.fout());
