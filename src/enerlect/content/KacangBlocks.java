@@ -81,7 +81,8 @@ public class KacangBlocks implements ContentList{
             			hitEffect = Fx.flakExplosion;
             			splashDamage = 27f * 1.5f;
             			splashDamageRadius = 35f;
-        		}};
+        			}}
+			);
 			health = 250;
 			range = 200f;
 			recoilAmount = 0.01f;
