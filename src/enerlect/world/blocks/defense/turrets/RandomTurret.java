@@ -15,12 +15,14 @@ import mindustry.ui.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
 import mindustry.world.blocks.defense.turrets;
+import mindustry.world.blocks.defense.turrets.*;
+import mindustry.world.blocks.defense.*;
 import enerlect.content.*;
 import enerlect.world.blocks.*;
 
 import static mindustry.Vars.*;
 
-public class ItemTurret extends Turret{
+public class RandomTurret extends ItemTurret{ // kool random turret code
     public ObjectMap<Item, BulletType> ammoTypes = new ObjectMap<>();
 
     public ItemTurret(String name){
@@ -28,9 +30,10 @@ public class ItemTurret extends Turret{
         hasItems = true;
     }
 
-    /** Initializes accepted ammo map. Format: [item1, bullet1, item2, bullet2...] */
-    public void ammo(Object... objects){
-        ammoTypes = ObjectMap.of(objects);
+    @Override
+    public void setStats(){
+        super.setStats();
+        stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shootType)));
     }
 
     /** Makes copies of all bullets and limits their range. */
@@ -82,13 +85,12 @@ public class ItemTurret extends Turret{
         super.init();
     }
 
-    public class ItemTurretBuild extends TurretBuild{
+    public class RandomTurretBuild extends ItemTurretBuild{
 
         @Override
         public void onProximityAdded(){
             super.onProximityAdded();
 
-            //add first ammo item to cheaty blocks so they can shoot properly
             if(cheating() && ammo.size > 0){
                 handleItem(this, ammoTypes.entries().next().key);
             }
@@ -115,7 +117,7 @@ public class ItemTurret extends Turret{
 
             if(type == null) return 0;
 
-            return Math.min((int)((maxAmmo - totalAmmo) / ammoTypes.get(item).ammoMultiplier), amount);
+            return Math.min((int)((maxAmmo - totalAmmo)), amount);
         }
 
         @Override
@@ -125,7 +127,6 @@ public class ItemTurret extends Turret{
             }
         }
 
-        //currently can't remove items from turrets.
         @Override
         public int removeStack(Item item, int amount){
             return 1;
@@ -142,9 +143,6 @@ public class ItemTurret extends Turret{
             if(type == null) return;
             totalAmmo += type.ammoMultiplier;
 
-            }
-
-            //must not be found
             ammo.add(new ItemEntry(item, (int)type.ammoMultiplier));
         }
 
@@ -179,14 +177,30 @@ public class ItemTurret extends Turret{
                 Item item = Vars.content.item(revision < 2 ? read.ub() : read.s());
                 short a = read.s();
 
+                if(item != null &&){
                     totalAmmo += a;
                     ammo.add(new ItemEntry(item, a));
                 }
             }
+		}
+		
+		@Override
+        public BulletType useAmmo(){
+            return shootType;
         }
+
+        @Override
+        public boolean hasAmmo(){
+            return true;
+        }
+
+        @Override
+        public BulletType peekAmmo(){
+            return shootType;
+		}
     }
 
-    public class ItemEntry extends AmmoEntry{
+    public class RandomEntry extends ItemEntry{
         public Item item;
 
         ItemEntry(Item item, int amount){
