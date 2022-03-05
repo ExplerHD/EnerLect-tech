@@ -10,7 +10,7 @@ import mindustry.graphics.*;
 import mindustry.graphics.Pal;
 import mindustry.world.*;
 import mindustry.world.meta.*;
-import mindustry.world.blocks.power;
+import mindustry.world.blocks.power.*;
 
 public class SporeGenerator extends ThermalGenerator{
     public Effect generateEffect = Fx.none;
