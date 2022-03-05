@@ -18,7 +18,6 @@ public class EnerLect extends Mod{
 	public void loadContent(){
     new EnerLectItems().load();
     new EnerLectBlocks().load();
-	new EnerLectFx().load();
 		new KacangBlocks().load();
 	}
 }
