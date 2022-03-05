@@ -63,7 +63,7 @@ public class EnerLectBlocks implements ContentList{
       craftTime = 90f;
       size = 3;
       hasItems = true;
-      consumes.items(Items.coal, 2));
+      consumes.items(Items.coal, 2);
     }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
