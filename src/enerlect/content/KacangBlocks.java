@@ -45,11 +45,13 @@ public class KacangBlocks implements ContentList{
 	@Override
   	public void load(){
 		// items
-		kacang = new Item("kacang"){{
-			 cost = 0;
+		kacang = new Item("kacang", Color.valueOf("edcc93")){{
+			cost = 0;
+			hardness  = 1;
 		}};
-		kacangHijau = new Item("kacang-hijau"){{
-			 cost = 0.1f;
+		kacangHijau = new Item("kacang-hijau", Color.valueOf("c4e880")){{
+			cost = 0.1f;
+			hardness  = 1;
 		}};
 		// blocks
 		test = new AirBlock("test");
@@ -61,8 +63,29 @@ public class KacangBlocks implements ContentList{
 			 recoilAmount = 0.03f;
 			 targetAir = true;
 			 targetGround = true;
-			 reloadTime = 30f;
+			 reloadTime = 15f;
 			 rotateSpeed = 5.5f;
+			 limitRange(0f);
+		}};
+		udam = new ItemTurret("udam"){{
+			requirements(Category.turret, with(Items.copper, 28, KacangBlocks.kacang, 12));
+			 ammo(KacangBlocks.kacang, new FlakBulletType(4f, 7){{
+            			lifetime = 60f;
+            			ammoMultiplier = 5f;
+            			shootEffect = Fx.shootSmall;
+            			reloadMultiplier = 0.5f;
+            			width = height = 8f;
+            			hitEffect = Fx.flakExplosion;
+            			splashDamage = 27f * 1.5f;
+            			splashDamageRadius = 35f;
+        		 }};
+			 health = 250;
+			 range = 200f;
+			 recoilAmount = 0.01f;
+			 targetAir = true;
+			 targetGround = true;
+			 reloadTime = 15f;
+			 rotateSpeed = 5.7f;
 			 limitRange(0f);
 		}};
   	}
