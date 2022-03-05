@@ -40,6 +40,8 @@ public class EnerLectBlocks implements ContentList{
     yellowsteelForge,
     // turrets
     implosion, aftab, /* balabad, */ 
+    // distr
+    leadconveyor, metaglassconveyor,
     // power
     spectralGenerator, lunarPanel, mediumLunarPanel, largeLunarPanel, hugeLunarPanel, biostoneGenerator;
   @Override
@@ -114,6 +116,21 @@ public class EnerLectBlocks implements ContentList{
         length = 25f * 8f;
         ammoMultiplier = 1f;
       }};
+    }};
+    // distr start
+    leadconveyor = new Conveyor("lead-conveyor"){{
+      requirements(Category.distribution, with(Items.copper, 1), true);
+      health = 45;
+      speed = 0.04f;
+      displayedSpeed = 4.3f;
+      buildCostMultiplier = 2f;
+    }};
+    metaglassconveyor = new Conveyor("metaglass-conveyor"){{
+      requirements(Category.distribution, with(Items.copper, 1), true);
+      health = 45;
+      speed = 0.04f;
+      displayedSpeed = 4.3f;
+      buildCostMultiplier = 2f;
     }};
     // turrets end
     // reg power
