@@ -46,8 +46,8 @@ public class KacangBlocks implements ContentList{
 		// blocks
 		test = new AirBlock("test");
 		binara = new ItemTurret("binara"){{
-			 requirements(Category.turret, with(Items.copper, 28, KacangBlocks.kacang, 12));
-			 ammo(KacangBlocks.kacang, Bullets.standardDense);
+			 requirements(Category.turret, with(Items.copper, 28, KacangItems.kacang, 12));
+			 ammo(KacangItems.kacang, Bullets.standardDense);
 			 health = 200;
 			 range = 192f;
 			 recoilAmount = 0.03f;
@@ -58,8 +58,8 @@ public class KacangBlocks implements ContentList{
 			 limitRange(0f);
 		}};
 		udam = new ItemTurret("udam"){{
-			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15, KacangBlocks.kacang, 20));
-			ammo(KacangBlocks.kacang, new FlakBulletType(4f, 7){{
+			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15, KacangItems.kacang, 20));
+			ammo(KacangItems.kacang, new FlakBulletType(4f, 7){{
             			lifetime = 60f;
             			ammoMultiplier = 5f;
             			shootEffect = Fx.shootSmall;
