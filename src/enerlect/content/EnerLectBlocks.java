@@ -157,5 +157,14 @@ public class EnerLectBlocks implements ContentList{
       size = 5;
       powerProduction = 1.5f;
     }};
+    biostoneGenerator = new SporeGenerator("biostone-generator"){{
+      requirements(Category.power, with(Items.copper, 40, Items.graphite, 35, Items.lead, 50, Items.silicon, 35, Items.metaglass, 40));
+      powerProduction = 2.15f;
+      generateEffect = EnerlectFx.biostonegenerate;
+      size = 2;
+      floating = true;
+      ambientSound = Sounds.hum;
+      ambientSoundVolume = 0.06f;
+    }};
   }
 }
