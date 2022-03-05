@@ -31,7 +31,7 @@ public class EnerLectFx{
     e.scaled(70f, f -> {
       color(Color.blue);
       stroke(3f * e.fout());
-      Fill.poly(e.x, e.y, 6, e.rotation, e.fin();
+      Fill.poly(e.x, e.y, 6, e.rotation, e.fin());
     });
   }),
   biostonegenerate = new Effect(90, e -> {
