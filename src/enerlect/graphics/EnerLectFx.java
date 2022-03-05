@@ -21,6 +21,13 @@ import static arc.math.Angles.*;
 import static mindustry.Vars.*;
 
 public class EnerLectFx{
+  private static final Rand rand = new Rand();
+  private static final Vec2 v = new Vec2();
+
+  public static final Effect
+
+  none = new Effect(0, 0f, e -> {}),
+    
   
   public static final Effect
     
