@@ -53,15 +53,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
             ammoTypes.put(entry.key, copy);
         }
     }
-
-    @Override
-    public void setStats(){
-        super.setStats();
-
-        stats.remove(Stat.itemCapacity);
-        stats.add(Stat.ammo, StatValues.ammo(ammoTypes));
-    }
-
+	
     @Override
     public void init(){
         consumes.add(new ConsumeItemFilter(i -> ammoTypes.containsKey(i)){
@@ -69,7 +61,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
             public void build(Building tile, Table table){
                 MultiReqImage image = new MultiReqImage();
                 content.items().each(i -> filter.get(i) && i.unlockedNow(), item -> image.add(new ReqImage(new ItemImage(item.uiIcon),
-                () -> tile instanceof ItemTurretBuild it && !it.ammo.isEmpty() && ((ItemEntry)it.ammo.peek()).item == item)));
+                () -> tile instanceof RandomTurretBuild it && !it.ammo.isEmpty() && ((RandomEntry)it.ammo.peek()).item == item)));
 
                 table.add(image).size(8 * 4);
             }
@@ -77,7 +69,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
             @Override
             public boolean valid(Building entity){
                 //valid when there's any ammo in the turret
-                return entity instanceof ItemTurretBuild it && !it.ammo.isEmpty();
+                return entity instanceof RandomTurretBuild it && !it.ammo.isEmpty();
             }
 
             @Override
@@ -183,7 +175,7 @@ public class RandomTurret extends ItemTurret{ // kool random turret code
 
                 if(item != null){
                     totalAmmo += a;
-                    ammo.add(new ItemEntry(item, a));
+                    ammo.add(new RandomEntry(item, a));
                 }
             }
 		}
