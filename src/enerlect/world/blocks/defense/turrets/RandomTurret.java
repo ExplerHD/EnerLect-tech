@@ -14,16 +14,16 @@ import mindustry.type.*;
 import mindustry.ui.*;
 import mindustry.world.consumers.*;
 import mindustry.world.meta.*;
-import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.defense.*;
-import enerlect.content.*;
-import enerlect.world.blocks.*;
+import mindustry.world.blocks.defense.turrets.*;
 import mindustry.Vars.*;
 import mindustry.ctype.*;
 import mindustry.ctype.Content;
 import mindustry.ctype.ContentList;
 import mindustry.ctype.ContentType;
 import mindustry.core.*;
+import enerlect.content.*;
+import enerlect.world.blocks.*;
 import static mindustry.Vars.*;
 
 public class RandomTurret extends ItemTurret{ // kool random turret code
