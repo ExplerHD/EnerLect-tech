@@ -26,7 +26,7 @@ public class EnerLectUnitContent implements ContentList{
       range = 160;
       maxRange = range;
       buildSpeed = 0.9f;
-      commandLimit = 8f;
+      commandLimit = 8;
       armor = 1f;
       constructor = UnitEntity::create;
       weapons.add(new Weapon("wrenches-healing-bolt"){{
