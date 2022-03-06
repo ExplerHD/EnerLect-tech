@@ -37,13 +37,11 @@ import static mindustry.type.ItemStack.*; // bjir
 public class EnerLectBlocks implements ContentList{
   public static Block
     // crafters
-    yellowsteelForge, graphitepress2,
+    yellowsteelForge,
     // turrets
     implosion, aftab, /* balabad, */ 
-    // distr
-    leadconveyor, metaglassconveyor,
     // power
-    spectralGenerator, lunarPanel, mediumLunarPanel, largeLunarPanel, hugeLunarPanel, biostoneGenerator;
+    biostoneGenerator, lunarPanel, mediumLunarPanel, largeLunarPanel;
   @Override
   public void load() {
     // reg crafters
@@ -55,15 +53,6 @@ public class EnerLectBlocks implements ContentList{
       size = 2;
       hasItems = true;
       consumes.items(with(Items.copper, 2, Items.silicon, 1, Items.coal, 1));
-    }};
-    graphitepress2 = new GenericCrafter("graphite-press-ii"){{
-      requirements(Category.crafting, with(Items.copper, 150, Items.lead, 125, Items.silicon, 100));
-      craftEffect = Fx.pulverizeMedium;
-      outputItem = new ItemStack(Items.graphite, 3);
-      craftTime = 90f;
-      size = 3;
-      hasItems = true;
-      consumes.item(Items.coal, 2);
     }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
@@ -126,21 +115,6 @@ public class EnerLectBlocks implements ContentList{
         ammoMultiplier = 1f;
       }};
     }};
-    // distr start
-    leadconveyor = new Conveyor("lead-conveyor"){{
-      requirements(Category.distribution, with(Items.copper, 1), true);
-      health = 45;
-      speed = 0.04f;
-      displayedSpeed = 4.3f;
-      buildCostMultiplier = 2f;
-    }};
-    metaglassconveyor = new Conveyor("metaglass-conveyor"){{
-      requirements(Category.distribution, with(Items.copper, 1), true);
-      health = 45;
-      speed = 0.04f;
-      displayedSpeed = 4.3f;
-      buildCostMultiplier = 2f;
-    }};
     // turrets end
     // reg power
     /* spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
@@ -155,7 +129,6 @@ public class EnerLectBlocks implements ContentList{
       ambientSound = Sounds.steam;
       ambientSoundVolume = 0.03f;
     }};  //disabled due to nullpointerexception */
-    
     lunarPanel = new LunarGenerator("lunar-panel"){{
       requirements(Category.power, with(Items.silicon, 15, EnerLectItems.darkenedMetal, 10, Items.lead, 15));
       health = 40 * size * size;
@@ -182,15 +155,6 @@ public class EnerLectBlocks implements ContentList{
       health = 40 * size * size;
       size = 5;
       powerProduction = 1.5f;
-    }};
-    biostoneGenerator = new SporeGenerator("biostone-generator"){{
-      requirements(Category.power, with(Items.copper, 40, Items.graphite, 35, Items.lead, 50, Items.silicon, 35, Items.metaglass, 40));
-      powerProduction = 2.15f;
-      generateEffect = EnerLectFx.biostonegenerate;
-      size = 2;
-      floating = true;
-      ambientSound = Sounds.hum;
-      ambientSoundVolume = 0.06f;
     }};
   }
 }
