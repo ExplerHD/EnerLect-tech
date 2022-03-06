@@ -30,7 +30,6 @@ public class EnerLectUnitContent implements ContentList{
       armor = 1f;
       constructor = UnitEntity::create;
       abilities.add(new RepairFieldAbility(12f, 60f * 4, 60f));
-      ammoType = new PowerAmmoType(1000);
       weapons.add(new Weapon("wrenches-healing-bolt"){{
         x = y = 0;
         reload = 20f;
