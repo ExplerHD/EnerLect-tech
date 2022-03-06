@@ -29,22 +29,20 @@ public class EnerLectUnitContent implements ContentList{
       commandLimit = 8f;
       armor = 1f;
       constructor = UnitEntity::create;
-      weapons.add(
-        weapons = new Weapon("wrenches-healing-bolt"){{
-          x = y = 0;
-          reload = 20f;
-          mirror = false;
-          rotate = false;
-          shootSound = Sounds.lasershoot;
-          bullet = new LaserBoltBulletType(5.2f, 13f){{
-            lifetime = 30f;
-            healPercent = 3f;
-            collidesTeam = true;
-            frontColor = Pal.heal;
-            backColor = Color.white;
-          }};
-        }}
-      );
+      weapons.add(new Weapon("wrenches-healing-bolt"){{
+        x = y = 0;
+        reload = 20f;
+        mirror = false;
+        rotate = false;
+        shootSound = Sounds.lasershoot;
+        bullet = new LaserBoltBulletType(5.2f, 13f){{
+          lifetime = 30f;
+          healPercent = 3f;
+          collidesTeam = true;
+          frontColor = Pal.heal;
+          backColor = Color.white;
+        }};
+      }});
     }};
   }
 }
