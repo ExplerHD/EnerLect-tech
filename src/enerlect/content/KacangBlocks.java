@@ -47,7 +47,10 @@ public class KacangBlocks implements ContentList{
 		test = new AirBlock("test");
 		binara = new ItemTurret("binara"){{
 			 requirements(Category.turret, with(Items.copper, 28, KacangItems.kacang, 12));
-			 ammo(KacangItems.kacang, Bullets.standardDense);
+			 ammo(
+				 KacangItems.kacang, Bullets.standardDense,
+				 KacangItems.kacangHijau, Bullets.fragPlastic
+			 );
 			 health = 200;
 			 range = 192f;
 			 recoilAmount = 0.03f;
