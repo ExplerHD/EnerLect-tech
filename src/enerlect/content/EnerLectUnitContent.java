@@ -21,7 +21,7 @@ public class EnerLectUnitContent implements ContentList{
     wrenches = new UnitType("wrenches"){{
       health = 750f;
       speed = 2f;
-      hitSize = 9f;
+      hitSize = 11f;
       flying = true;
       range = 160;
       maxRange = range;
@@ -29,7 +29,7 @@ public class EnerLectUnitContent implements ContentList{
       commandLimit = 8;
       armor = 1f;
       constructor = UnitEntity::create;
-      abilities.add(new RepairFieldAbility(12f, 60f * 4, 60f));
+      abilities.add(new RepairFieldAbility(60f, 60f * 4, 60f));
       weapons.add(new Weapon("wrenches-healing-bolt"){{
         x = y = 0;
         reload = 20f;
