@@ -36,24 +36,13 @@ import static mindustry.type.ItemStack.*; // bjir
 
 public class EnerLectBlocks implements ContentList{
   public static Block
-    // crafters
-    yellowsteelForge,
     // turrets
     implosion, aftab, /* balabad, */ 
     // power
-    biostoneGenerator, lunarPanel, mediumLunarPanel, largeLunarPanel;
+    lunarPanel, mediumLunarPanel, largeLunarPanel;
   @Override
   public void load() {
     // reg crafters
-    yellowsteelForge = new GenericCrafter("yellowsteel-forge"){{
-      requirements(Category.crafting, with(Items.copper, 80, Items.lead, 45, Items.graphite, 57));
-      craftEffect = Fx.pulverizeMedium;
-      outputItem = new ItemStack(EnerLectItems.yellowsteel, 1);
-      craftTime = 60f;
-      size = 2;
-      hasItems = true;
-      consumes.items(with(Items.copper, 2, Items.silicon, 1, Items.coal, 1));
-    }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
