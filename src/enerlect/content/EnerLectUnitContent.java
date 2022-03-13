@@ -1,16 +1,22 @@
 package enerlect.content;
 
-import arc.graphics.Color;
+import arc.graphics.*;
+import arc.graphics.g2d.*;
+import arc.math.*;
 import arc.struct.*;
-import mindustry.graphics.*;
-import mindustry.content.*;
+import mindustry.ai.types.*;
+import mindustry.annotations.Annotations.*;
+import mindustry.ctype.*;
 import mindustry.entities.*;
-import mindustry.entities.bullet.*;
 import mindustry.entities.abilities.*;
-import mindustry.world.meta.*;
+import mindustry.entities.bullet.*;
+import mindustry.entities.effect.*;
 import mindustry.gen.*;
-import mindustry.ctype.ContentList;
+import mindustry.graphics.*;
 import mindustry.type.*;
+import mindustry.type.ammo.*;
+import mindustry.type.weapons.*;
+import mindustry.world.meta.*;
 
 public class EnerLectUnitContent implements ContentList{
   public static UnitType
@@ -44,6 +50,39 @@ public class EnerLectUnitContent implements ContentList{
           backColor = Color.white;
         }};
       }});
+    }};
+    screwdriver = new UnitType("screwdriver"){{
+      health = 900f;
+      hitSize = 15f;
+      rotationSpeed = 5f;
+      range = 70f;
+      constructor = UnitEntity::create;
+      flying = false;
+      commandLimit = 8;
+      buildSpeed = 1.1f;
+      armor = 1f;
+      canBoost = true;
+      riseSpeed = 0.07f;
+      landShake = 4f;
+      weapons.add(new Weapon("screwdriver-laser"){{
+        x = 9f;
+        y = 1f;
+        reload = 60f;
+        recoil = 4f;
+        shake = 2f;
+        shootSound = Sounds.laser;
+        bullet = new LaserBulletType(){{
+          damage = 45f;
+          recoil = 1f;
+          sideAngle = 45f;
+          sideWidth = 1f;
+          sideLength = 75f;
+          length = 135f;
+          collidesTeam = true;
+          healPercent = 10;
+          colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
+        }};
+      )}};
     }};
   }
 }
