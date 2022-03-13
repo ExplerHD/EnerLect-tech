@@ -82,7 +82,7 @@ public class EnerLectUnitContent implements ContentList{
           healPercent = 10;
           colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
         }};
-      )}};
+      }});
     }};
   }
 }
