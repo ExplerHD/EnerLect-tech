@@ -20,7 +20,7 @@ import mindustry.world.meta.*;
 
 public class EnerLectUnitContent implements ContentList{
   public static UnitType
-    wrenches;
+    wrenches, screwdriver;
   
   @Override
   public void load(){
@@ -54,7 +54,7 @@ public class EnerLectUnitContent implements ContentList{
     screwdriver = new UnitType("screwdriver"){{
       health = 900f;
       hitSize = 15f;
-      rotationSpeed = 5f;
+      rotateSpeed = 5f;
       range = 70f;
       constructor = UnitEntity::create;
       flying = false;
