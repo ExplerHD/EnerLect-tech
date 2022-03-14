@@ -27,12 +27,10 @@ public class EnerLectFx{
   public static final Effect
 
   none = new Effect(0, 0f, e -> {}),
-  implosion = new Effect(60f, e -> {
-    e.scaled(70f, f -> {
-      color(Color.blue);
-      stroke(3f * e.fout());
-      Fill.poly(e.x, e.y, 6, e.rotation, e.fin());
-    });
+  implosion = new Effect(60f, 70f, e -> {
+    color(Color.blue);
+    stroke(3f * e.fout());
+    Fill.poly(e.x, e.y, 6, e.rotation, e.fin());
   }),
   biostonegenerate = new Effect(90, e -> {
     color(Color.valueOf("97d96f"));
