@@ -36,13 +36,25 @@ import static mindustry.type.ItemStack.*; // bjir
 
 public class EnerLectBlocks implements ContentList{
   public static Block
+    // defense
+    lightWall, lightWallLarge,
     // turrets
     implosion, aftab, assaultBulletDestroyer, /* balabad, */ 
     // power
     lunarPanel, mediumLunarPanel, largeLunarPanel;
   @Override
   public void load() {
-    // reg crafters
+    // reg defense
+    lightWall = new Wall("light-wall"){{
+      requirements(Category.defense, with(EnerLectItems.lightMetal, 6));
+      health = 400 * 4;
+      lightningChance = 1f;
+    }};
+    lightWallLarge = new Wall("light-wall-large"){{
+      requirements(Category.defense, with(EnerLectItems.lightMetal, 24));
+      health = 400 * 4 * 4;
+      lightningChance = 1f;
+    }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
