@@ -40,7 +40,9 @@ import enerlect.world.blocks.power.*;
 public class KacangBlocks implements ContentList{
 	public static Block 
 	/* code test */ test,
-	/* turrets */ binara, udam, rudu;
+	/* turrets */ binara, udam, rudu,
+	/* drills */ kacangDrill
+	;
 	@Override
   public void load(){
 		test = new AirBlock("test");
@@ -102,5 +104,12 @@ public class KacangBlocks implements ContentList{
             		health = 520;
             		shootSound = Sounds.spark;
         	}};
+        	kacangDrill = new Drill("kacang-drill"){{
+            		requirements(Category.production, with(KacangItems.kacang, 6), true);
+            		tier = 3;
+            		drillTime = 900;
+            		size = 1;
+            		consumes.liquid(Liquids.water, 0.01f).boost();
+                }};
   	}
 }
