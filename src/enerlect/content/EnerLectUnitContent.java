@@ -83,7 +83,7 @@ public class EnerLectUnitContent implements ContentList{
           length = 135f;
           collidesTeam = true;
           healPercent = 10;
-          colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerlaser, Color.white};
+          colors = new Color[]{Color.blue.cpy().a(0.4f), Color.blue, Color.white};
         }};
       }});
     }};
