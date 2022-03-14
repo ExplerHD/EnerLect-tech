@@ -67,7 +67,7 @@ public class EnerLectUnitContent implements ContentList{
       lowAltitude = true;
       riseSpeed = 0.07f;
       landShake = 4f;
-      weapons.add(new Weapon("screwdriver-laser"){{
+      weapons.add(new Weapon("enerlect-screwdriver-laser"){{
         x = 9f;
         y = 1f;
         reload = 60f;
