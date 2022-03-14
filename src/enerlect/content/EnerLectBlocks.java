@@ -164,6 +164,7 @@ public class EnerLectBlocks implements ContentList{
       hasPower = true;
       consumes.powerCond(11f, (PointDefenseBuild b) -> b.target != null);
       shootLength = 5f;
+      range = 256f;
       bulletDamage = 100f;
       reloadTime = 2;
     }};
