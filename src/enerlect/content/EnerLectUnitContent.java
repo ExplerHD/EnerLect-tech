@@ -64,7 +64,7 @@ public class EnerLectUnitContent implements ContentList{
       boostMultiplier = 2f;
       engineOffset = 6f;
       engineSize = 3f;
-      lowAltitude = true:
+      lowAltitude = true;
       riseSpeed = 0.07f;
       landShake = 4f;
       weapons.add(new Weapon("screwdriver-laser"){{
