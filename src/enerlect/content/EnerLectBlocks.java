@@ -41,7 +41,7 @@ public class EnerLectBlocks implements ContentList{
     // crafters
     lightMetalSmelter,
     // turrets
-    implosion, aftab, assaultBulletDestroyer, /* balabad, */ 
+    implosion, aftab, balabad, assaultBulletDestroyer,
     // power
     lunarPanel, mediumLunarPanel, largeLunarPanel;
   @Override
@@ -135,6 +135,28 @@ public class EnerLectBlocks implements ContentList{
         ammoMultiplier = 1f;
       }};
     }};
+    balabad = new ItemTurret("balabad"){{
+      requirements(Category.turret, with(Items.copper, 100, Items.titanium, 62, Items.plastanium, 40));
+      ammo(
+        Items.metaglass, Bullets.fragGlass,
+        Items.blastCompound, Bullets.fragExplosive,
+        Items.plastanium, Bullets.fragPlastic,
+        Items.surgeAlloy, Bullets.fragSurge
+      );
+      xRand = 4f;
+      reloadTime = 8f;
+      range = 154f;
+      size = 2;
+      recoilAmount = 1f;
+      rotateSpeed = 7f;
+      inaccuracy = 0f;
+      shootCone = 30f;
+      shootSound = Sounds.shootSnap;
+
+      health = 145 * size * size;
+      limitRange();
+    }};
+
     assaultBulletDestroyer = new PointDefenseTurret("assault-bullet-destroyer"){{
       requirements(Category.turret, with(Items.silicon, 290, Items.thorium, 180, Items.phaseFabric, 140, Items.surgeAlloy, 25));
       health = 250 * size * 2;
