@@ -37,7 +37,7 @@ import static mindustry.type.ItemStack.*; // bjir
 public class EnerLectBlocks implements ContentList{
   public static Block
     // turrets
-    implosion, aftab, /* balabad, */ 
+    implosion, aftab, assaultBulletDestroyer, /* balabad, */ 
     // power
     lunarPanel, mediumLunarPanel, largeLunarPanel;
   @Override
@@ -103,6 +103,16 @@ public class EnerLectBlocks implements ContentList{
         length = 25f * 8f;
         ammoMultiplier = 1f;
       }};
+    }};
+    assaultBulletDestroyer = new PointDefenseTurret("assault-bullet-destroyer"){{
+      requirements(Category.turret, with(Items.silicon, 290, Items.thorium, 180, Items.phaseFabric, 140, Items.surgeAlloy, 25));
+      health = 250 * size * 2;
+      size = 3;
+      hasPower = true;
+      consumes.powerCond(11f, (PointDefenseBuild b) -> b.target != null);
+      shootLength = 5f;
+      bulletDamage = 100f;
+      reloadTime = 2;
     }};
     // turrets end
     // reg power
