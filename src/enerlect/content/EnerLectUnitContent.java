@@ -61,6 +61,10 @@ public class EnerLectUnitContent implements ContentList{
       buildSpeed = 1.1f;
       armor = 1f;
       canBoost = true;
+      boostMultiplier = 2f;
+      engineOffset = 6f;
+      engineSize = 3f;
+      lowAltitude = true:
       riseSpeed = 0.07f;
       landShake = 4f;
       weapons.add(new Weapon("screwdriver-laser"){{
@@ -79,7 +83,7 @@ public class EnerLectUnitContent implements ContentList{
           length = 135f;
           collidesTeam = true;
           healPercent = 10;
-          colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
+          colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerlaser, Color.white};
         }};
       }});
     }};
