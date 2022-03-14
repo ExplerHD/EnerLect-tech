@@ -38,6 +38,8 @@ public class EnerLectBlocks implements ContentList{
   public static Block
     // defense
     lightWall, lightWallLarge,
+    // crafters
+    lightMetalSmelter,
     // turrets
     implosion, aftab, assaultBulletDestroyer, /* balabad, */ 
     // power
@@ -54,6 +56,23 @@ public class EnerLectBlocks implements ContentList{
       requirements(Category.defense, with(EnerLectItems.lightMetal, 24));
       health = 400 * 4 * 4;
       lightningChance = 1f;
+    }};
+    // end defense
+    // reg crafters
+    lightMetalSmelter = new GenericCrafter("light-metal-smelter"){{
+      requirements(Category.crafting, with(Items.copper, 40, Items.lead, 35, Items.silicon, 15));
+      craftEffect = Fx.smeltsmoke;
+      outputItem = new ItemStack(EnerLectItems.lightMetal, 2);
+      craftTime = 60f;
+      size = 3;
+      hasPower = true;
+      hasLiquids = false;
+      drawer = new DrawSmelter(Color.valueOf("fdfdfd"));
+      ambientSound = Sounds.smelter;
+      ambientSoundVolume = 0.07f;
+
+      consumes.items(with(Items.copper, 2, Items.metaglass, 2));
+      consumes.power(1.5f);
     }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
