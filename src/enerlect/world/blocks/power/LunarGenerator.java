@@ -32,7 +32,7 @@ public class LunarGenerator extends PowerGenerator{
       productionEfficiency = enabled ?
         Mathf.maxZero(Attribute.light.env() + 
                       (state.rules.lighting ?
-                       0.1f + state.rules.ambientLight.a :
+                       1f + state.rules.ambientLight.a :
                        1f
         )) : 0f;
     }
