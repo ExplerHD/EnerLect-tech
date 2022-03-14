@@ -40,10 +40,9 @@ import enerlect.world.blocks.power.*;
 public class KacangBlocks implements ContentList{
 	public static Block 
 	/* code test */ test,
-	/* turrets */ binara, udam;
+	/* turrets */ binara, udam, rudu;
 	@Override
   public void load(){
-		// blocks
 		test = new AirBlock("test");
 		binara = new ItemTurret("binara"){{
 			 requirements(Category.turret, with(Items.copper, 28, KacangItems.kacang, 12));
@@ -82,6 +81,26 @@ public class KacangBlocks implements ContentList{
 			rotateSpeed = 5.7f;
 			limitRange(0f);
 		}};
-		// blocks end
+		rudu = new PowerTurret("rudu"){{
+            		requirements(Category.turret, with(Items.copper, 75, Items.lead, 25, KacangItems.kacang, 15));
+            		shootType = new LightningBulletType(){{
+                		damage = 40;
+                		lightningLength = 50;
+                		collidesAir = true;
+                		ammoMultiplier = 1f;
+            		}};
+            		reloadTime = 28f;
+            		shootCone = 40f;
+            		rotateSpeed = 9f;
+            		powerUse = 3f;
+            		targetAir = true;
+            		range = 90f;
+            		shootEffect = Fx.lightningShoot;
+            		heatColor = Color.red;
+            		recoilAmount = 1f;
+            		size = 2;
+            		health = 520;
+            		shootSound = Sounds.spark;
+        	}};
   	}
 }
