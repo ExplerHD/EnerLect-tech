@@ -160,7 +160,7 @@ public class EnerLectBlocks implements ContentList{
       limitRange();
     }};
 
-    assaultBulletDestroyer = new PointDefenseTurret("assault-bullet-destroyer"){{
+    assaultBulletDestroyer = new PointDefenseTurret("abd"){{
       requirements(Category.turret, with(Items.silicon, 290, Items.thorium, 180, Items.phaseFabric, 140, Items.surgeAlloy, 25));
       health = 250 * size * 2;
       size = 3;
@@ -173,18 +173,6 @@ public class EnerLectBlocks implements ContentList{
     }};
     // turrets end
     // reg power
-    /* spectralGenerator = new SingleTypeGenerator("spectral-generator"){{
-      requirements(Category.power, with(Items.copper, 60, Items.lead, 60, Items.plastanium, 60, Items.phaseFabric, 60));
-      consumes.item(Items.thorium);
-      consumes.liquid(EnerLectItems.electricLiquid, 0.15f);
-      hasItems = true;
-      hasLiquids = true;
-      size = 4;
-      health = 40 * size * size;
-      powerProduction = 115f;
-      ambientSound = Sounds.steam;
-      ambientSoundVolume = 0.03f;
-    }};  //disabled due to nullpointerexception */
     lunarPanel = new LunarGenerator("lunar-panel"){{
       requirements(Category.power, with(Items.silicon, 15, EnerLectItems.darkenedMetal, 10, Items.lead, 15));
       health = 45 * size * size;
