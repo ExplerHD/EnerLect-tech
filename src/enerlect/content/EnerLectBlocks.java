@@ -77,6 +77,20 @@ public class EnerLectBlocks implements ContentList{
       consumes.items(with(Items.copper, 2, Items.metaglass, 2));
       consumes.power(1.5f);
     }};
+    darkenedMetalForge = new GenericCrafter("darkened-metal-forge"){{
+      requirements(Category.crafting, with(Items.copper, 40, Items.lead, 30, Items.silicon, 40));
+      craftEffect = EnerLectFx.blackhole;
+      outputItem = new ItemStack(EnerLectItems.darkenedMetal, 5);
+      craftTime = 60f * 3;
+      size = 3;
+      hasPower = true;
+      drawer = new DrawSmelter(Color.valueOf("bababa"));
+      ambientSound = Sounds.smelter;
+      ambientSoundVolume = 0.03f;
+      
+      consumes.items(with(Items.copper, 5, Items.coal, 5, Items.silicon, 5));
+      consumes.power(2.0f);
+    }};
     // reg turrets
     implosion = new PowerTurret("implosion"){{
       requirements(Category.turret, with(
