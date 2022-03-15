@@ -48,7 +48,7 @@ public class KacangBlocks implements ContentList{
   public void load(){
 		test = new AirBlock("test");
 		binara = new ItemTurret("binara"){{
-			 requirements(Category.turret, BuildVisibility.sandboxOnly, with(Items.copper, 28, KacangItems.kacang, 12));
+			 requirements(Category.turret, with(Items.copper, 28, KacangItems.kacang, 12));
 			 ammo(
 				 KacangItems.kacang, Bullets.standardDense,
 				 KacangItems.kacangHijau, Bullets.fragPlastic
@@ -63,7 +63,7 @@ public class KacangBlocks implements ContentList{
 			 limitRange(0f);
 		}};
 		udam = new ItemTurret("udam"){{
-			requirements(Category.turret, BuildVisibility.sandboxOnly, with(Items.copper, 28, Items.lead, 15, KacangItems.kacang, 20));
+			requirements(Category.turret, with(Items.copper, 28, Items.lead, 15, KacangItems.kacang, 20));
 			ammo(KacangItems.kacang, new FlakBulletType(4f, 7){{
             			lifetime = 60f;
             			ammoMultiplier = 5f;
@@ -85,7 +85,7 @@ public class KacangBlocks implements ContentList{
 			limitRange(0f);
 		}};
 		rudu = new PowerTurret("rudu"){{
-            		requirements(Category.turret, BuildVisibility.sandboxOnly, with(Items.copper, 75, Items.lead, 25, KacangItems.kacang, 15));
+            		requirements(Category.turret, with(Items.copper, 75, Items.lead, 25, KacangItems.kacang, 15));
             		shootType = new LightningBulletType(){{
                 		damage = 40;
                 		lightningLength = 50;
@@ -106,7 +106,7 @@ public class KacangBlocks implements ContentList{
             		shootSound = Sounds.spark;
         	}};
         	kacangDrill = new Drill("kacang-drill"){{
-            		requirements(Category.production, BuildVisibility.sandboxOnly, with(KacangItems.kacang, 6), true);
+            		requirements(Category.production, with(KacangItems.kacang, 6), true);
             		tier = 3;
             		drillTime = 900;
             		size = 1;
