@@ -50,7 +50,7 @@ public class EnerLectBlocks implements ContentList{
     lightWall = new Wall("light-wall"){{
       requirements(Category.defense, with(EnerLectItems.lightMetal, 6));
       health = 300;
-      lightningDamage = 3f
+      lightningDamage = 3f;
       lightningChance = 1f;
     }};
     lightWallLarge = new Wall("light-wall-large"){{
