@@ -79,7 +79,7 @@ public class EnerLectBlocks implements ContentList{
     }};
     darkenedMetalForge = new GenericCrafter("darkened-metal-forge"){{
       requirements(Category.crafting, with(Items.copper, 40, Items.lead, 30, Items.silicon, 40));
-      craftEffect = EnerLectFx.blackhole;
+      craftEffect = EnerLectFx.darkenedMetalForge;
       outputItem = new ItemStack(EnerLectItems.darkenedMetal, 5);
       craftTime = 60f * 3;
       size = 3;
