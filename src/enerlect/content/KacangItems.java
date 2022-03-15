@@ -14,10 +14,7 @@ public class KacangItems implements ContentList{
 			cost = 0;
 			hardness  = 1;
 		}};
-		kacangHijau = new Item("kacang-hijau", Color.valueOf("c4e880")){{
-			cost = 0.1f;
-			hardness  = 1;
-		}};
+		
 		// items end
     }
 }
