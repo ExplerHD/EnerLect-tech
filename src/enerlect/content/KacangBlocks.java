@@ -50,8 +50,7 @@ public class KacangBlocks implements ContentList{
 		binara = new ItemTurret("binara"){{
 			 requirements(Category.turret, with(Items.copper, 28, KacangItems.kacang, 12));
 			 ammo(
-				 KacangItems.kacang, Bullets.standardDense,
-				 KacangItems.kacangHijau, Bullets.fragPlastic
+				 KacangItems.kacang, Bullets.standardDense
 			 );
 			 health = 200;
 			 range = 192f;
