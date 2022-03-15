@@ -32,7 +32,7 @@ public class EnerLectFx{
     stroke(3f * e.fout());
     Fill.poly(e.x, e.y, 6, e.rotation, e.fin());
   });
-  darkenedMetalForge = new Effect(30f, e -> {
+  dmfCrafted = new Effect(30f, e -> {
 		for(int i = 0; i < 5; i++) {
       Drawf.tri(e.x, e.y, 8, 25 * e.fout(), i * (360/5) + 90 * e.fin());
 		}
