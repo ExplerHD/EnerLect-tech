@@ -36,6 +36,7 @@ import enerlect.content.*;
 import enerlect.graphics.*;
 import enerlect.world.blocks.*;
 import enerlect.world.blocks.power.*;
+import mindustry.world.meta.BuildVisibility;
 
 public class KacangBlocks implements ContentList{
 	public static Block 
