@@ -31,6 +31,6 @@ public class EnerLectFx{
     color(Color.blue);
     stroke(3f * e.fout());
     Fill.poly(e.x, e.y, 6, e.rotation, e.fin());
-  })
+  });
 }
 
