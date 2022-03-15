@@ -49,12 +49,12 @@ public class EnerLectBlocks implements ContentList{
     // reg defense
     lightWall = new Wall("light-wall"){{
       requirements(Category.defense, with(EnerLectItems.lightMetal, 6));
-      health = 400 * 4;
+      health = 300;
       lightningChance = 1f;
     }};
     lightWallLarge = new Wall("light-wall-large"){{
       requirements(Category.defense, with(EnerLectItems.lightMetal, 24));
-      health = 400 * 4 * 4;
+      health = 300 * 4;
       lightningChance = 1f;
     }};
     // end defense
