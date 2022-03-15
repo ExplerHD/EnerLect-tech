@@ -39,7 +39,7 @@ public class EnerLectBlocks implements ContentList{
     // defense
     lightWall, lightWallLarge,
     // crafters
-    lightMetalSmelter,
+    lightMetalSmelter, darkenedMetalForge,
     // turrets
     implosion, aftab, balabad, assaultBulletDestroyer,
     // power
