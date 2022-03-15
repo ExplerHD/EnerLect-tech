@@ -6,7 +6,7 @@ import mindustry.type.*;
 import enerlect.content.*;
 
 public class KacangItems implements ContentList{
-  public static Item kacang, kacangHijau;
+  public static Item kacang;
   @Override
   public void load(){
     // items
@@ -14,7 +14,6 @@ public class KacangItems implements ContentList{
 			cost = 0;
 			hardness  = 1;
 		}};
-		
 		// items end
     }
 }
